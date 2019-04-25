@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+header{
+	padding: 0px;
+}
+
+.banner{
+	background: url(img19.jpg) no-repeat center;
+	background-size: cover;
+	height: 200vh;
+}
+
+body {
+    color: white;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 720px;
+    margin-left: 140px;
+    margin-right: 140px;
+    top: 80px;
+    box-sizing: border-box;
+    display: block;
+}
+
+.nav1{
+	background-color: #fff;
+}
+
+.navbar{
+	padding: 0px;
+}
+
+.navbar-nav li{
+	z-index: 1;
+}
+
+.navbar-nav li a{
+	font-size: 20px;
+	padding: 15px 60px!important;
+}
+
+.navbar-nav li a:hover{
+	border-right: 3px solid #ff4f81;
+	border-left: 3px solid #ff4f81;
+	transition: 0.5s all;
+}
+.navbar-light .navbar-nav .nav-link{
+	color: #000;
+}
+
+form {
+    width: 70%;
+    box-sizing: border-box;
+    display: block;
+}
+
+.sp{
+	padding-bottom: 20px;
+}
+
+.ti{
+	padding-right: 35px;
+}
+
+.si{
+	padding-left: 35px;
+}
+
+table{
+	color: #fff;
+	table-layout: fixed;
+	border: 1px solid white;
+}
+
+th,tr{
+	padding-left: 50px;
+	padding-right: 50px;
+	color: #fff;
+	border: 1px solid white;
+}
+
+tbody,#bod td,#bod tr{
+	border: 1px solid white;
+	color: #fff;
+}

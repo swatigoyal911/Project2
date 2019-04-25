@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Sign In</title>
+		<link rel="stylesheet" type="text/css" href="Newfolder/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="./style_signIn.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="Newfolder/flexslider.css">
+		<link rel="stylesheet" type="text/css" href="Newfolder/lightbox.css">
+	</head>
+	<body>
+		<div class="inform" id="contact">
+    		<div class="container">
+    			<h1>SIGN IN</h1>
+    			<p>Already have an account?<br>Enter your details below!</p>
+    			<div class="inform_form">
+    				<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    						<div class="col-sm-4 col-md-4 form-left">
+    							<input type ="text" name="name" placeholder="Name" required="">
+    						</div>
+    						<div class="col-sm-4 col-md-4 form-left">
+    							<input type ="email" name="email" placeholder="Email Id" required="">
+    						</div>
+    						<div class="col-sm-4 col-md-4 form-left">
+    							<input type ="code" name="code" placeholder="CODE" required="">
+    						</div>
+    						<div class="col-sm-4 col-md-4 form-left">
+    							<input type ="password" name="password" placeholder="Password" required="">
+    						</div>
+    						<div class="clearfix"></div>
+    				</form>
+    				<a class="sub" href="./home.html"><button type = "submit">SUBMIT</button></a>
+    			</div>
+    		</div>
+    	</div>
+	</body>
+</html>

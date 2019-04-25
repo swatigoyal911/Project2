@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+.banner{
+	background: url(img2.jpg) no-repeat center;
+	background-size: cover;
+	height: 100vh;
+	position: relative;
+}
+
+header{
+	padding: 5px 30px 0px;
+	background-color: rgba(225,225,225,0.6);
+}
+
+.hat{
+	float: left;
+	display: inline-block;
+}
+
+.title-color{
+	text-transform: uppercase;
+	color: #ff4181;
+}
+
+.search_my{
+	float: right;
+	border: 3px #000 solid;
+}
+
+.search1{
+	border: none;
+	background-color: none;
+	width: 150px;
+	background-color: transparent;
+}
+
+.button1{
+	color: #fff;
+	background-color: #000;
+	border: none;
+	height: 40px;
+	width: 40px;
+}
+
+.nav1{
+	background-color: #f8f9fa;
+}
+
+.navbar{
+	padding: 0px;
+}
+
+.navbar-nav li{
+	z-index: 1;
+}
+
+.navbar-nav li a{
+	font-size: 17px;
+	padding: 15px 60px!important;
+}
+
+.navbar-nav li a:hover{
+	border-right: 3px solid #ff4f81;
+	border-left: 3px solid #ff4f81;
+	transition: 0.5s all;
+}
+
+.navbar-collapse{
+	background-color: rgba(225,225,225,1);
+}
+
+.navbar-light .navbar-nav .nav-link{
+	color: #000;
+}
+
+.slider{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.one{
+	text-align: center;
+}
+
+.faltu{
+	width: 150px;
+	margin: 2px auto;
+}
+
+.fex-caption{
+	padding: 2%;
+	left: 0;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+}
+
+.more-bttn{
+	font-size: 14px;
+	width: 150px;
+	color: #fff;
+	font-weight: 600;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	background: #ff4f81;
+	padding: 10px 22px;
+	border: 1px solid #ff4f81;
+}
+
+.more-bttn:hover{
+	color: #000;
+	background: #fff;
+}
+
+.modal-body img{
+	width: 100%;
+}

@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+.inform{
+	background: url(img3.jpg) no-repeat center;
+	background-size: cover;
+	height: 100vh;
+	position: relative;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.inform h1{
+	color:#fff;
+	letter-spacing: 10px;
+	text-align: left;
+	padding-left: 40px;
+	padding-bottom: 20px;
+	font-family: "Helvetica", Arial, sans-serif; 
+	font-size:5vw;
+}
+
+.inform p{
+	color:#fff;
+	margin-right: 0px;
+	padding-left: 90px;
+	padding-right: 100px;
+	padding-bottom: 20px;
+	border-bottom: double 2px #fff;
+	display: inline-block;
+	border-right-style: double;
+}
+
+.inform_form{
+	width:100%;
+	margin: 0 auto;
+	
+}
+
+.form-left{
+	padding-left:0;
+}
+
+.sub{
+	padding-left: 140px;
+}
+
+.inform input[type="text"], input[type="email"], input[type="password"], input[type="code"]{
+	width: 100%;
+	color:#fff;
+	background: none;
+	outline: none;
+	font-size:1em;
+	padding: 0.8em 1em;
+	margin-bottom: 2em;
+	border: none;
+	border-bottom: solid 2px #fff;
+	display: inline-block;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+}
+
+.inform button[type="submit"]{
+	color:#fff;
+	outline: none;
+	padding: 0.7em 1em;
+	font-size: 14px;
+	margin: 1em 0 0 0;
+	border: 1px solid #fff;
+	background: #ff4f81;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+}
+
+.inform button[type="submit"]:hover{
+	background: none;
+	color: #fff;
+	border: 1px solid #fff;
+}
+
+.inform input[type="text"]:hover, .inform input[type="text"]:focus, .inform input[type="email"]:hover, .inform input[type="email"]:focus{
+	border-color: #ff4f81;
+}
+
+.inform input[type="code"]:hover, .inform input[type="code"]:focus, .inform input[type="password"]:hover, .inform input[type="password"]:focus{
+	border-color:#ff4f81;
+}

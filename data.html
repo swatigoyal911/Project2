@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>DATA</title>
+        <link rel="stylesheet" type="text/css" href="Newfolder/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="./style_data.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="Newfolder/flexslider.css">
+        <link rel="stylesheet" type="text/css" href="Newfolder/lightbox.css">
+    </head>
+    <body>
+        <div class="banner">
+            <header>
+                <div class="nav1">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=" #navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav m-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./home.html"><strong>HOME</strong></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./motor.html"><strong>MOTOR CONTROL</strong></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><strong>DATA</strong></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./graph.html"><strong>GRAPH</strong></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./Contact.html"><strong>CONTACT US</strong></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./feedback.html"><strong>FEEDBACK</strong></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+        </div>
+        <style>
+        #c4ytable {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+         
+        #c4ytable td, #c4ytable th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+         
+        #c4ytable tr:nth-child(even){background-color: #f2f2f2;}
+         
+        #c4ytable tr:hover {background-color: #ddd;}
+         
+        #c4ytable th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #00A8A9;
+            color: white;
+        }
+        </style>
+ 
+        <?php
+            //Connect to database and create table
+            $servername = "localhost";
+            $username = "sri_id_4";
+            $password = "sssa";
+            $dbname = "espdemo";
+         
+            // Create connection
+            $conn = new mysqli($servername, $username, $password, $dbname);
+            // Check connection
+            if ($conn->connect_error) {
+                die("Database Connection failed: " . $conn->connect_error);
+                echo "<a href='install.php'>If first time running click here to install database</a>";
+            }
+        ?> 
+ 
+ 
+        <div id="cards" class="cards">
+ 
+        <?php 
+            $sql = "SELECT * FROM logs ORDER BY id DESC";
+            if ($result=mysqli_query($conn,$sql))
+            {
+              // Fetch one and one row
+              echo "<TABLE id='c4ytable'>";
+              echo "<TR><TH>Sr.No.</TH><TH>Temperature</TH><TH>Humidity</TH><TH>Soil Moisture</TH><TH>Rain Status</TH><TH>Date</TH><TH>Time</TH></TR>";
+              while ($row=mysqli_fetch_row($result))
+              {
+                echo "<TR>";
+                echo "<TD>".$row[0]."</TD>";
+                echo "<TD>".$row[1]."</TD>";
+                echo "<TD>".$row[2]."</TD>";
+                //echo "<TD>".$row[3]."</TD>";
+                echo "<TD>".$row[4]."</TD>";
+                echo "<TD>".$row[5]."</TD>";
+                echo "</TR>";
+              }
+              echo "</TABLE>";
+              // Free result set
+              mysqli_free_result($result);
+            }
+         
+            mysqli_close($conn);
+        ?>
+        </div>
+    </body>
+</html>
